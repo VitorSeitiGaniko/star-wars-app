@@ -157,10 +157,6 @@ const Filter: React.FC = () => {
                 }
             })
 
-            // context.setPlanetArray(uniquePlanets);
-            // context.setStarshipArray(uniqueStarships);
-            // context.setSpecieArray(uniqueSpecies);
-
             setUniquePlanets(uniquePlanets)
             setUniqueStarships(uniqueStarships)
             setUniqueSpecies(uniqueSpecies)
@@ -169,10 +165,6 @@ const Filter: React.FC = () => {
             context.setLazyLoading(false)
             context.setTopic_Search(!context.setTopic_Search)
 
-            console.log('UNICOS 01 ==>>>>>>>', uniquePlanets, uniqueStarships, uniqueSpecies, context.allowPush);
-            console.log('UNICOS 02 ==>>>>>>>', context.planetArray, context.starshipArray, context.specieArray, context.allowPush);
-            
-            
             context.setAllowPush(false)
         }
     }
@@ -249,10 +241,10 @@ const Filter: React.FC = () => {
             <Container>
                 <Form>
                     <SelectContainer>
-                        <Label>Planeta</Label>
+                        <Label>Planet</Label>
                         <Select value={selectedPlanet} onChange={(e) => setSelectedPlanet(e.target.value)}>
-                            <option defaultValue="Selecione um planeta">
-                                Selecione um planeta
+                            <option defaultValue="Choose a planet">
+                                Choose a planet
                             </option>
                             {uniquePlanetsArray && uniquePlanetsArray.length > 0 && uniquePlanetsArray.map((planet: PlanetType, index: number) => (
                             <option key={planet.name + index} value={planet.url}>{planet.name}</option>
@@ -261,10 +253,10 @@ const Filter: React.FC = () => {
                     </SelectContainer>
                     
                     <SelectContainer>
-                        <Label>Nave espacial</Label>
+                        <Label>Starship</Label>
                         <Select value={selectedStarship} onChange={(e) => setSelectedStarship(e.target.value)}>
-                            <option defaultValue="Selecione uma nave">
-                                Selecione uma nave
+                            <option defaultValue="Choose a starship">
+                                Choose a starship
                             </option>
                             {uniqueStarshipsArray && uniqueStarshipsArray.length > 0 && uniqueStarshipsArray.map((starship: StarshipType, index: number) => (
                             <option key={starship.name + index} value={starship.url}>{starship.name}</option>
@@ -273,19 +265,19 @@ const Filter: React.FC = () => {
                     </SelectContainer>
 
                     <SelectContainer>
-                        <Label>Espécie</Label>
+                        <Label>Specie</Label>
                         <Select value={selectedSpecie} onChange={(e) => setSelectedSpecie(e.target.value)}>
-                            <option defaultValue="Selecione uma espécie">
-                                Selecione uma espécie
+                            <option defaultValue="Choose a specie">
+                                Choose a specie
                             </option>
                             {uniqueSpeciesArray && uniqueSpeciesArray.length > 0 && uniqueSpeciesArray.map((specie: SpecieType, index: number) => (
                             <option key={specie.name + index} value={specie.url}>{specie.name}</option>
                             ))}
                         </Select>
                     </SelectContainer>
-                    <Button onClick={applyCombinedFilter}>Filtrar</Button>
+                    <Button onClick={applyCombinedFilter}>Filter</Button>
                 </Form>
-                <ButtonClear onClick={cleanFilter}>Limpar Filtros</ButtonClear>
+                <ButtonClear onClick={cleanFilter}>Clear Filters</ButtonClear>
             </Container>
             )}
         </>

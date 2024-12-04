@@ -39,7 +39,6 @@ interface CardProps {
     filter?: boolean;
 }
 
-
 const CardBox = styled.div`
     border: none;
     border-radius: 8px;

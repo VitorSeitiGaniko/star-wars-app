@@ -52,7 +52,6 @@ function Search() {
             if(response.ok && response.status === 200){
                 context?.setTopic_SearchNotFound(false)
                 const data = await response.json()
-                console.log('DATA SEARCH  ==> ', data);
 
                 context?.setPlanetArray([])
                 context?.setStarshipArray([])
@@ -85,7 +84,7 @@ function Search() {
             <form onSubmit={handleSubmit}>
                 <SearchContainer>
                     <Input type="text" 
-                    placeholder="Personagem"
+                    placeholder="Character"
                     value={inputSearch}
                     onChange={(e) => setInputSearch(e.target.value)}/>
                     <Icon onClick={handleSubmit}/>

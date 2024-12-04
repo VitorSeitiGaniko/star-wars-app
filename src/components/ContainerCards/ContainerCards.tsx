@@ -51,7 +51,7 @@ const ContainerCards: React.FC = () => {
 
     async function getPeople(url: string) {
         context?.setLoading(true)
-        
+
         context?.setNextPage('')
         context?.setPrevPage('')
 
@@ -59,7 +59,6 @@ const ContainerCards: React.FC = () => {
             const response = await fetch(url)
             if (response.ok && response.status === 200) {
                 const data = await response.json()
-                console.log('DATA LIST  ==> ', data);
 
                 context?.setPeopleArray([])
                 context?.setPlanetArray([])
@@ -72,7 +71,7 @@ const ContainerCards: React.FC = () => {
                 if (data.previous) context?.setPrevPage(data.previous)
                 if (data.next) context?.setNextPage(data.next)
             }
-        } catch (error) {   
+        } catch (error) {
             console.error('erros: ', error)
         }
     }
@@ -88,7 +87,7 @@ const ContainerCards: React.FC = () => {
         }
     }
 
-    function handleNextPage() {        
+    function handleNextPage() {
         if(context && context.nextPage){
             context?.setPeopleArray([])
             context?.setPlanetArray([])
@@ -96,7 +95,7 @@ const ContainerCards: React.FC = () => {
             context?.setSpecieArray([])
             getPeople(context.nextPage)
             context?.setAllowPush(true)
-        }        
+        }
     }
 
     useEffect(() => {
@@ -115,12 +114,12 @@ const ContainerCards: React.FC = () => {
                 ))}
             </CardContainer>
 
-            {context && context.topic_SearchNotFound && <h1>Personagem não encontrado</h1>}
+            {context && context.topic_SearchNotFound && <h1>Character not found</h1>}
             
             <ButtonsContainer>
-                {context && !context.loading && !context.isFilterList && context.prevPage && <button onClick={handlePrevPage}>Página Anterior</button>}
+                {context && !context.loading && !context.isFilterList && context.prevPage && <button onClick={handlePrevPage}>Prev page</button>}
 
-                {context && !context.loading && !context.isFilterList && context.nextPage && <button onClick={handleNextPage}>Próxima página</button>}
+                {context && !context.loading && !context.isFilterList && context.nextPage && <button onClick={handleNextPage}>Next page</button>}
             </ButtonsContainer>
         </>    
     )
