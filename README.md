@@ -28,15 +28,15 @@ Star Wars App is a web application that consumes the Star Wars API to display in
 
 ## How to Run the Project
 1. Clone the repository:
-  `git clone https://github.com/seu-usuario/star-wars-app.git`
+  ```git clone https://github.com/seu-usuario/star-wars-app.git```
   
 2. It is recommended to use Node version 22.2.0.
-  `nvm install 22.2.0`
-  `nvm use 22.2.0`
+  ```nvm install 22.2.0```
+  ```nvm use 22.2.0```
 
 3. Install dependencies:
-  `cd star-wars-app`
-  `npm install`
+  ```cd star-wars-app```
+  ```npm install```
 
 4. Install dependencies:
-  `npm start`
+  ```npm start```
