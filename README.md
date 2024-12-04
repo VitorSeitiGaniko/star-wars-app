@@ -1,6 +1,6 @@
 # Star Wars App
 
-Star Wars App is a web application that consumes the Star Wars API to display information about characters, planets, starships, and species. The app allows users to filter and paginate results, as well as view additional details about each item.
+Star Wars App is a web application that consumes the Star Wars API to display information about characters, planets, starships, and species. The app allows users to search, filter and paginate results, as well as view additional details about each item.
 
 ## Technologies Used
 - **React**: A JavaScript library for building user interfaces.
@@ -14,17 +14,11 @@ Star Wars App is a web application that consumes the Star Wars API to display in
 - **`ContainerCards.tsx`**: Manages the display of character cards, including pagination.
 - **`Filter.tsx`**: Provides filtering options for characters by planet, starship, and species.
 - **`Loading.tsx`**: Shows a loading image while data is being fetched.
+- **`ModalCard.tsx`**: Component that displays a modal with detailed information about each character.
 - **`Search.tsx`**: Manages the search functionality for characters.
 
 ### Context
 - **`Context.tsx`**: Defines the application's global context, including states and functions for data management.
-
-## Features
-- **Character Display**: Shows a list of Star Wars characters with basic information.
-- **Character Details**: Displays additional details when a character card is clicked.
-- **Filtering**: Allows users to filter characters by planet, starship, and species.
-- **Pagination**: Enables navigation through different result pages.
-- **Loading Indicator**: Displays a loading animation while fetching data.
 
 ## How to Run the Project
 1. Clone the repository:  
@@ -39,4 +33,4 @@ Star Wars App is a web application that consumes the Star Wars API to display in
   ```npm install```
 
 4. Install dependencies:  
-  ```npm start```
+  ```npm run dev```
