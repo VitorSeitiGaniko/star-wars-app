@@ -2,6 +2,9 @@
 
 Star Wars App is a web application that consumes the Star Wars API to display information about characters, planets, starships, and species. The app allows users to search, filter and paginate results, as well as view additional details about each item.
 
+## Project Link
+[Star Wars App](https://github.com/seu-usuario/star-wars-app)
+
 ## Technologies Used
 - **React**: A JavaScript library for building user interfaces.
 - **TypeScript**: A superset of JavaScript that adds static typing to the code.
