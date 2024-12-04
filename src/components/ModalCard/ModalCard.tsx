@@ -95,6 +95,16 @@ const IconClose = styled.span`
     cursor: pointer;
 `
 
+interface StarshipType {
+    name: string;
+    url: string;
+}
+
+interface SpecieType {
+    name: string;
+    url: string;
+}
+
 function ModalCard() {
     const context = React.useContext(ContextPeople)
 
@@ -166,7 +176,7 @@ function ModalCard() {
                     {context.personSelected.starshipInfos && context.personSelected.starshipInfos.length > 0 &&
                         <Subtitle>Starships</Subtitle>
                     }
-                    {context.personSelected.starshipInfos && context.personSelected.starshipInfos.length > 0 && context.personSelected.starshipInfos.map((starship, index) => (
+                    {context.personSelected.starshipInfos && context.personSelected.starshipInfos.length > 0 && context.personSelected.starshipInfos.map((starship: StarshipType, index: number) => (
                         <Paragraph key={starship.name + index}>
                             <span>{starship.name}</span>
                         </Paragraph>
@@ -175,7 +185,7 @@ function ModalCard() {
                     {context.personSelected.specieInfos && context.personSelected.specieInfos.length > 0 &&
                         <Subtitle>Species</Subtitle>
                     }
-                    {context.personSelected.specieInfos && context.personSelected.specieInfos.length > 0 && context.personSelected.specieInfos.map((specie, index) => (
+                    {context.personSelected.specieInfos && context.personSelected.specieInfos.length > 0 && context.personSelected.specieInfos.map((specie: SpecieType, index: number) => (
                         <Paragraph key={specie.name + index}>
                             <span>{specie.name}</span> 
                         </Paragraph>

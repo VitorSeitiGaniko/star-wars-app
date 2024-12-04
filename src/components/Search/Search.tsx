@@ -39,7 +39,8 @@ function Search() {
 
     const [inputSearch, setInputSearch] = React.useState<string>('')
 
-    async function handleSubmit(event: React.FormEvent<HTMLFormElement>){
+    // eslint-disable-next-line
+    async function handleSubmit(event: any){
         event.preventDefault()
         context?.setIsFilterList(false)
         context?.setNextPage('')

@@ -203,6 +203,7 @@ const Filter: React.FC = () => {
         setSelectedSpecie('')
     }
 
+    // eslint-disable-next-line
     function hasNoDuplicates(array: any[]) {
         const seen = new Set();
         for (const item of array) {

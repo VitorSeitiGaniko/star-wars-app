@@ -29,7 +29,7 @@ const Loading: React.FC = () => {
 
     return (
         <>
-        {context.lazyLoading && (
+        {context && context.lazyLoading && (
         <Overlay>
             <Container>
                 <img src={loadingImage} alt="Loading" />

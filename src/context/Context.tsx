@@ -45,7 +45,9 @@ interface ContextPeopleProps {
     setSpecieArray: React.Dispatch<React.SetStateAction<SpecieType[]>>;
     isFilterList: boolean;
     setIsFilterList: React.Dispatch<React.SetStateAction<boolean>>;
+    // eslint-disable-next-line
     personSelected: any;
+    // eslint-disable-next-line
     setPersonSelected: React.Dispatch<React.SetStateAction<any>>;
     allowPush: boolean;
     setAllowPush: React.Dispatch<React.SetStateAction<boolean>>;
@@ -69,6 +71,7 @@ interface ContextPeopleProps {
 
 export const ContextPeople = React.createContext<ContextPeopleProps | undefined>(undefined)
 
+// eslint-disable-next-line
 export function ContextProvider({ children }: { children: any }) {
     const [peopleArray, setPeopleArray] = React.useState<Person[]>([])
     const [peopleArrayLength, setPeopleArrayLength] = React.useState<number>(0)
@@ -78,6 +81,7 @@ export function ContextProvider({ children }: { children: any }) {
     const [specieArray, setSpecieArray] = React.useState<SpecieType[]>([])
     const [isFilterList, setIsFilterList] = React.useState<boolean>(false)
 
+    // eslint-disable-next-line
     const [personSelected, setPersonSelected] = React.useState<any>('')
     const [allowPush, setAllowPush] = React.useState<boolean>(true)
     const [remove, setRemove] = React.useState<boolean>(false)

@@ -190,6 +190,7 @@ const Card: React.FC<CardProps> = ({ person, filter }) => {
         });
     }
 
+    // eslint-disable-next-line
     function getPersonImage(name: string): Promise<any> {
         return new Promise((resolve, reject) => {
             fetch(`${URL_IMAGE}${name}`)
@@ -225,6 +226,7 @@ const Card: React.FC<CardProps> = ({ person, filter }) => {
     }
 
     useEffect(() => {
+        // eslint-disable-next-line
         const promises: Promise<any>[] = [];
         context?.setLoading(true)
 
